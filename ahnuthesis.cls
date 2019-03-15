@@ -49,7 +49,7 @@ linkcolor=black]{hyperref}
   {}
   {\hspace{1ex}\mydots\hspace{1ex}\thecontentspage}%
 
-\titlecontents*{subsection}[1.8pc]
+\titlecontents{subsection}[1.8pc]
   {\bfseries}
   {\thecontentslabel. }
   {}
