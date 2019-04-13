@@ -1,0 +1,13 @@
+language: generic
+
+cache:
+  directories:
+    - /tmp/texlive
+
+install:
+  - source ./.ci/texlive.sh
+
+script:
+  - xelatex test2.tex
+  - biber bylw.bib
+  - xelatex test2.tex
