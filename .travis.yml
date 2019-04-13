@@ -1,3 +1,4 @@
+  #This script and the codes inside .ci folder are modified files from repository "ustcthesis," thanks are due to zepinglee
   language: generic
 
 cache:
