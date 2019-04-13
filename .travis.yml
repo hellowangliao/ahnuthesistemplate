@@ -9,6 +9,6 @@ install:
   - source ./.ci/texlive.sh
 
 script:
-  - make main
-  - make doc
-  - make test
+  - xelatex test2.tex
+  - biber test2
+  - xelatex test2.tex
