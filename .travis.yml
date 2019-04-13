@@ -1,8 +1,11 @@
 sudo: required
-dist: trusty
-before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+language: generic
+services: docker
+
 script:
-- xelatex test2.tex
-- biber test2
-- xelatex test2.tex
+  # We use the docker image from https://hub.docker.com/r/dxjoke/tectonic-docker/
+  - docker pull dxjoke/tectonic-docker
+  # Compiling only main.tex:
+  #- docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic test2.tex"
+  # Compiling multiple files as well as using biber:
+  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 test2.tex; biber test2; tectonic test2.tex; tectonic test2.tex"
