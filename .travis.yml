@@ -1,7 +1,8 @@
-language: generic
-
-
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
-  - xelatex test2.tex
-  - biber bylw.bib
-  - xelatex test2.tex
+- xelatex test2.tex
+- biber test2
+- xelatex test2.tex
