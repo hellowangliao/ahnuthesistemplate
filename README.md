@@ -1,5 +1,5 @@
 # ahnuthesistemplate
-This repository contains the LaTeX template for writing graduate thesis in Anhui Normal University
+This repository contains the LaTeX template for writing graduate thesis at Anhui Normal University
 
 这是用于攥写安徽师范大学本科毕业论文的LaTeX模板，模板按照2015年格式和安徽师范大学内流传的de facto标准制备合成的。
 
