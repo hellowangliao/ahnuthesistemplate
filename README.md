@@ -8,5 +8,5 @@ This repository contains the LaTeX template for writing graduate thesis at Anhui
 
 如欲合成test2.pdf,则要用xelatex编译。
 
-有任何问题，请耐心发邮件至作者邮箱leywon@qq.com，欢迎讨论！
+本人已毕业，本模板暂停维护，作者表示抱歉！
 
